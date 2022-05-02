@@ -15,7 +15,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 
 $size: 70px;
 $border-opacity: 0.1;
-$transition: .25s easy-out;
+$transition: 0.25s ease-out;
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px;
@@ -23,8 +23,8 @@ $gutter: $grid-gutter-width;
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilities
 
@@ -35,18 +35,18 @@ $gutter: $grid-gutter-width;
 		font-family: $fname;
 		font-style: $fstyle;
 		font-weight: $fweight;
-		src: url($furl) format('woff2');
+		src: url($furl) format("woff2");
 		font-display: $fdisplay;
 	}
 }
 
-@include font('oswald-vh', normal, 700, '../fonts/oswaldbold-webfont.woff2');
-@include font('oswald-vh', normal, 500, '../fonts/oswaldmedium-webfont.woff2');
-@include font('raleway-vh', normal, 800, '../fonts/ralewayextrabold-webfont.woff2');
-@include font('raleway-vh', normal, 500, '../fonts/ralewaymedium-webfont.woff2');
-@include font('raleway-vh', normal, 400, '../fonts/ralewayregular-webfont.woff2');
-@include font('raleway-vh', normal, 600, '../fonts/ralewaysemibold-webfont.woff2');
-@include font('roboto-vh', normal, 500, '../fonts/robotomedium-webfont.woff2');
+@include font("oswald-vh", normal, 700, "../fonts/oswaldbold-webfont.woff2");
+@include font("oswald-vh", normal, 500, "../fonts/oswaldmedium-webfont.woff2");
+@include font("raleway-vh", normal, 800, "../fonts/ralewayextrabold-webfont.woff2");
+@include font("raleway-vh", normal, 500, "../fonts/ralewaymedium-webfont.woff2");
+@include font("raleway-vh", normal, 400, "../fonts/ralewayregular-webfont.woff2");
+@include font("raleway-vh", normal, 600, "../fonts/ralewaysemibold-webfont.woff2");
+@include font("roboto-vh", normal, 500, "../fonts/robotomedium-webfont.woff2");
 
 // GENERAL CSS SETTINGS
 
@@ -80,4 +80,9 @@ body {
 	min-width: 320px;
 	position: relative;
 	overflow-x: hidden;
+}
+
+.page-wrapper{
+	max-width: 1440px;
+	margin: 0 auto;
 }

@@ -31,7 +31,7 @@
 	text-transform: uppercase;
 	color: $white;
 	vertical-align: middle;
-	transition: color .25s ease-out;
+	transition: color $transition;
 }
 
 .contacts {
@@ -64,7 +64,7 @@
 	}
 }
 
-
+// comment
 .contacts__item {
 	padding: 9px 27px;
 
@@ -87,7 +87,7 @@
 	padding: 0;
 	border: none;
 	background: #3c3c3c;
-	transition: background .25s ease-out;
+	transition: background $transition;
 
 	&:hover,
 	&:focus {
