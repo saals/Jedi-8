@@ -1,0 +1,101 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: $size;
+	background: $deep;
+}
+
+.header__logo {
+	margin-right: 27px;
+}
+
+.logo {
+	text-decoration: none;
+
+	&:hover>.logo__name {
+		color: $accent;
+	}
+}
+
+.logo__img {
+	width: $size;
+	object-fit: contain;
+}
+
+.logo__name {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 15px;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	color: $white;
+	vertical-align: middle;
+	transition: color $transition;
+}
+
+.contacts {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 12px;
+	letter-spacing: 0.4em;
+	text-transform: uppercase;
+	color: $white;
+	opacity: 0.5;
+}
+
+.header__contacts {
+
+	&::before,
+	&::after {
+		display: block;
+		content: '';
+		width: 50px;
+		height: 1px;
+		margin: 0 auto;
+		background-color: $white;
+		opacity: 0.2;
+	}
+}
+
+// comment
+.contacts__item {
+	padding: 9px 27px;
+
+	a {
+		opacity: 1;
+	}
+
+	&:not(:last-child) {
+		border-right: 1px solid rgba(255, 255, 255, 0.2);
+	}
+}
+
+.header__buttons {
+	margin-left: 27px;
+}
+
+.button {
+	width: $size;
+	height: $size;
+	padding: 0;
+	border: none;
+	background: #3c3c3c;
+	transition: background $transition;
+
+	&:hover,
+	&:focus {
+		background: $accent;
+	}
+}
+
+.burger-icon {
+	display: block;
+	margin: auto;
+}
