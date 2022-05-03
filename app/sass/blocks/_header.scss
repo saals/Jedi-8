@@ -13,7 +13,7 @@
 .logo {
 	text-decoration: none;
 
-	&:hover>.logo__name {
+	&:hover > .logo__name {
 		color: $accent;
 	}
 }
@@ -51,16 +51,15 @@
 }
 
 .header__contacts {
-
 	&::before,
 	&::after {
 		display: block;
-		content: '';
+		content: "";
 		width: 50px;
 		height: 1px;
 		margin: 0 auto;
 		background-color: $white;
-		opacity: 0.2;
+		opacity: $opacity * 2;
 	}
 }
 
@@ -79,6 +78,9 @@
 
 .header__buttons {
 	margin-left: 27px;
+	.button {
+		background: #3c3c3c;
+	}
 }
 
 .button {
@@ -86,7 +88,7 @@
 	height: $size;
 	padding: 0;
 	border: none;
-	background: #3c3c3c;
+	background: transparent;
 	transition: background $transition;
 
 	&:hover,

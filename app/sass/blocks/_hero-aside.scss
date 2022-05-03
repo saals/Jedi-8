@@ -3,9 +3,11 @@
 	flex-direction: column;
 	justify-content: space-between;
 	width: $size;
-	height: calc(100% - $size);
+	height: 100%;
 
 	background: $dark;
+	position: absolute;
+	z-index: 5;
 }
 .hero-aside__soc {
 	display: flex;
@@ -20,6 +22,8 @@
 	.soc__link {
 		width: 40px;
 		height: 40px;
+		border: 1px solid $white;
+
 		&:not(:last-child) {
 			margin-bottom: -1px;
 			border-bottom: none;
@@ -34,13 +38,16 @@
 .soc {
 	display: flex;
 	margin: 0;
-	opacity: 0.2;
 }
 .soc__link {
 	height: $size;
 	width: $size;
-	border: 1px solid $white;
 	display: flex;
+	opacity: $opacity * 2;
+	&:hover {
+		opacity: 1;
+		border: none;
+	}
 }
 .soc__img {
 	margin: auto;

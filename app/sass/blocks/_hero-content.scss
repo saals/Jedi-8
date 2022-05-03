@@ -1,0 +1,19 @@
+.hero-content__share {
+	background: $dark;
+	border-right: 3px solid $accent;
+
+	width: min-content; //
+	position: absolute;
+	bottom: 0;
+
+	.soc__link {
+		border-left: 1px solid $white;
+
+		// &:hover {
+		// 	border-left: none;
+		// }
+		// &:first-child {
+		// 	pointer-events: none;
+		// }
+	}
+}
