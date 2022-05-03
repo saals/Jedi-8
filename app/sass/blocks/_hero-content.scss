@@ -1,10 +1,21 @@
+.hero-content {
+	padding-left: $size;
+	height: 100%;
+	position: relative;
+}
+
+.hero-content__controls {
+	display: flex;
+	justify-content: space-between; //
+	align-items: center;
+	bottom: 0;
+	width: 70%;
+	position: absolute;
+}
+
 .hero-content__share {
 	background: $dark;
 	border-right: 3px solid $accent;
-
-	width: min-content; //
-	position: absolute;
-	bottom: 0;
 
 	.soc__link {
 		border-left: 1px solid $white;
@@ -17,4 +28,11 @@
 		// 	pointer-events: none;
 		// }
 	}
+}
+
+.hero-content__pagination {
+}
+.hero-content__scrolbar {
+}
+.hero-content__navigation {
 }
