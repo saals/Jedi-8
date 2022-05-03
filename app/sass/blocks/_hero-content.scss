@@ -9,9 +9,10 @@
 	.soc__link {
 		border-left: 1px solid $white;
 
-		// &:hover {
-		// 	border-left: none;
-		// }
+		&:hover {
+			opacity: 1;
+			// border-left: none;
+		}
 		// &:first-child {
 		// 	pointer-events: none;
 		// }

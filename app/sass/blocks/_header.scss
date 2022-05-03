@@ -78,23 +78,7 @@
 
 .header__buttons {
 	margin-left: 27px;
-	.button {
-		background: #3c3c3c;
-	}
-}
-
-.button {
-	width: $size;
-	height: $size;
-	padding: 0;
-	border: none;
-	background: transparent;
-	transition: background $transition;
-
-	&:hover,
-	&:focus {
-		background: $accent;
-	}
+	background: #3c3c3c;
 }
 
 .burger-icon {

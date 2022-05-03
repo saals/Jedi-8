@@ -89,3 +89,31 @@ body {
 	height: 90vh;
 	min-height: 500px;
 }
+
+.button {
+	width: $size;
+	height: $size;
+	padding: 0;
+	border: none;
+	background: transparent;
+	transition: background $transition;
+
+	&:hover,
+	&:focus {
+		background: $accent;
+	}
+}
+
+.soc {
+	display: flex;
+	margin: 0;
+}
+.soc__link {
+	height: $size;
+	width: $size;
+	display: flex;
+	opacity: $opacity * 2;
+}
+.soc__img {
+	margin: auto;
+}

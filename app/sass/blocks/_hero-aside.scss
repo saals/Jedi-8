@@ -23,6 +23,10 @@
 		width: 40px;
 		height: 40px;
 		border: 1px solid $white;
+		&:hover {
+			opacity: 1;
+			border: none;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: -1px;
@@ -35,23 +39,7 @@
 		content: url(../images/dist/decoration.svg);
 	}
 }
-.soc {
-	display: flex;
-	margin: 0;
-}
-.soc__link {
-	height: $size;
-	width: $size;
-	display: flex;
-	opacity: $opacity * 2;
-	&:hover {
-		opacity: 1;
-		border: none;
-	}
-}
-.soc__img {
-	margin: auto;
-}
+
 .hero-aside__share-icon {
 	background: $accent url(../images/dist/share-solid.svg) no-repeat center;
 	background-size: 12px;
