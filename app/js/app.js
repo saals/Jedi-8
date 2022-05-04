@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			invert: false,
 		},
 	});
-});
 
-// swiperImg.Controller.control = swiperTxt;
-// swiperTxt.Controller.control = swiperImg;
+	swiperTxt.controller.control = swiperImg;
+	swiperImg.controller.control = swiperTxt;
+});
