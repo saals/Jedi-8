@@ -2,6 +2,86 @@
 	padding-left: $size;
 	height: 100%;
 	position: relative;
+	background-color: $deep;
+}
+
+.swiper-txt {
+	height: calc(100% - $size);
+	width: calc(100% - $size);
+	overflow: hidden;
+	position: absolute;
+	z-index: 3;
+}
+
+.swiper-txt__slide {
+	display: flex;
+}
+
+.swiper-txt__info {
+	color: $white;
+	width: 63%;
+	text-align: right;
+	align-self: center;
+	margin-left: auto;
+	margin-right: 17%;
+}
+
+.swiper-txt__title {
+	margin-bottom: 21px;
+	font-family: "oswald-vh", sans-serif;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 120%;
+	text-transform: uppercase;
+
+	span {
+		color: $accent;
+		white-space: nowrap;
+	}
+}
+
+.swiper-txt__desc {
+	padding-left: 30%;
+	margin-bottom: 18px;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.swiper-txt__button {
+	width: auto;
+	height: auto;
+	padding: 17px 26px;
+	font-weight: 800;
+	font-size: 10px;
+	line-height: 120%;
+	color: $white;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: $accent;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: $dark;
+		transition: width 0.75s ease-out;
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			width: 100%;
+		}
+	}
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
 }
 
 .swiper-img {
@@ -9,6 +89,7 @@
 	height: 100%;
 	overflow: hidden;
 	position: relative;
+
 	&::before {
 		display: block;
 		content: "";
@@ -23,7 +104,6 @@
 .swiper-img__slide {
 	height: 100%;
 	overflow: hidden;
-	// position: absolute;
 }
 
 .slide-img__bg {
@@ -31,7 +111,6 @@
 	height: 100%;
 	background-position: center;
 	background-size: cover;
-	// position: absolute;
 }
 
 .hero-content__controls {
@@ -41,7 +120,7 @@
 	bottom: 0;
 	width: 70%;
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 }
 
 .hero-content__share {
@@ -55,6 +134,7 @@
 			opacity: 1;
 			// border-left: none;
 		}
+
 		// &:first-child {
 		// 	pointer-events: none;
 		// }
@@ -63,7 +143,9 @@
 
 .hero-content__pagination {
 }
+
 .hero-content__scrolbar {
 }
+
 .hero-content__navigation {
 }
