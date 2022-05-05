@@ -4,6 +4,7 @@
 	align-items: center;
 	min-height: $size;
 	background: $deep;
+	border: 1px solid rgba(255, 255, 255, $opacity);
 }
 
 .header__logo {
