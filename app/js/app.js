@@ -1,5 +1,5 @@
-import Swiper, { Parallax, Mousewheel, Controller, Pagination } from "swiper";
-Swiper.use([Parallax, Mousewheel, Controller, Pagination]);
+import Swiper, { Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation } from "swiper";
+Swiper.use([Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation]);
 
 document.addEventListener("DOMContentLoaded", () => {
 	const swiperImg = new Swiper(".swiper-img", {
@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
+		},
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			draggable: true,
+		},
+		navigation: {
+			prevEl: ".swiper-button-prev",
+			nextEl: ".swiper-button-next",
 		},
 	});
 

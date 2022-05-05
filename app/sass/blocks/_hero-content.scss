@@ -1,7 +1,7 @@
 .hero-content {
 	padding-left: $size;
 	height: 100%;
-	// position: relative;
+	position: relative;
 	background-color: $deep;
 }
 
@@ -147,7 +147,6 @@
 	// flex: 0 0 140px;
 	width: 140px;
 	height: 66%;
-
 	position: relative;
 
 	.swiper-pagination-bullet {
@@ -172,6 +171,7 @@
 
 	.swiper-pagination-bullet-active {
 		border: 1px solid $accent;
+
 		&::before {
 			background-color: $accent;
 		}
@@ -179,15 +179,61 @@
 }
 
 .hero-content__scrolbar {
-	color: #fff;
-
 	// flex: 1 0 0;
 	flex-grow: 1;
+	height: 5px;
+
+	.swiper-scrollbar {
+		height: 2px;
+		background: rgba(255, 255, 255, $opacity * 2);
+	}
+
+	.swiper-scrollbar-drag {
+		height: 4px;
+		background: $accent;
+		top: -1px;
+	}
 }
 
 .hero-content__navigation {
-	color: #fff;
-
 	// flex: 0 0 140px;
+	position: relative;
 	width: 140px;
+	height: 100%;
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		width: 32px;
+		height: 32px;
+		color: $accent;
+		background: #3c3c3c;
+		border: 2px solid $accent;
+		border-radius: 50%;
+
+		&::after {
+			font-size: 10px;
+		}
+	}
+
+	.swiper-button-prev {
+		left: 24%;
+
+		&::after {
+			margin-right: 2px;
+		}
+	}
+	.swiper-button-next {
+		right: 24%;
+
+		&::after {
+			margin-left: 1px;
+		}
+	}
+
+	.swiper-button-disabled,
+	.swiper-button-disabled {
+		border: 2px solid #8a8a8a;
+		color: #8a8a8a;
+		opacity: 1;
+	}
 }
