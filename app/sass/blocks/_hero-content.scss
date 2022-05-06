@@ -113,6 +113,34 @@
 	background-size: cover;
 }
 
+.hero-content__counter {
+	position: absolute;
+	top: 15px;
+	right: 55px;
+	height: 80px;
+	line-height: 80px;
+}
+
+.hero-content__slide-number {
+	position: absolute;
+	right: 55px;
+	bottom: 20px;
+	font-family: "oswald-vh";
+	font-weight: 500;
+	font-size: 100px;
+	line-height: 148px;
+	color: #222;
+
+	// text-shadow: 1px 1px 1px #7f7f7f;
+	-webkit-text-stroke: 1px #7f7f7f;
+
+	span {
+		color: $accent;
+		margin-left: -25px;
+		-webkit-text-stroke: 0;
+	}
+}
+
 .hero-content__gear {
 	position: absolute;
 	top: calc(50% - 270px);
