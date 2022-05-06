@@ -113,6 +113,17 @@
 	background-size: cover;
 }
 
+.hero-content__gear {
+	position: absolute;
+	top: calc(50% - 270px);
+	right: 5.5%;
+	z-index: 3;
+	width: 470px;
+	height: 470px;
+	background: url(../../images/dist/gear.svg) no-repeat center;
+	background-size: cover;
+}
+
 .hero-content__controls {
 	display: flex;
 	justify-content: space-between; //

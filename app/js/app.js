@@ -1,6 +1,8 @@
 import Swiper, { Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation } from "swiper";
 Swiper.use([Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation]);
 
+import { gsap, Power2 } from "gsap";
+
 document.addEventListener("DOMContentLoaded", () => {
 	const swiperImg = new Swiper(".swiper-img", {
 		speed: 2400,
@@ -29,4 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	swiperTxt.controller.control = swiperImg;
 	swiperImg.controller.control = swiperTxt;
+
+	// let gear = document.querySelector(".hero-content__gear");
+
+	swiperTxt.on("slideNextTransitionStart", function () {
+		gsap.to(".hero-content__gear", {
+			duration: 2.4,
+			rotate: "+=30",
+			ease: Power2.easeOut,
+		});
+	});
+	swiperTxt.on("slidePrevTransitionStart", function () {
+		gsap.to(".hero-content__gear", {
+			duration: 2.4,
+			rotate: "-=30",
+			ease: Power2.easeOut,
+		});
+	});
 });
