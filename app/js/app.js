@@ -2,8 +2,16 @@ import Swiper, { Parallax, Mousewheel, Controller, Pagination, Scrollbar, Naviga
 Swiper.use([Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation]);
 
 import { gsap, Power2 } from "gsap";
+import micromodal from "micromodal";
 
 document.addEventListener("DOMContentLoaded", () => {
+	micromodal.init({
+		disableScroll: true,
+		disableFocus: true,
+		awaitOpenAnimation: true,
+		awaitCloseAnimation: true,
+	});
+
 	const swiperImg = new Swiper(".swiper-img", {
 		speed: 2400,
 		loop: false,
@@ -12,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			el: ".count__total",
 			type: "custom",
 			renderCustom: function (swiper, current, total) {
-				return `0${total}`;
+				let totalRes = total >= 10 ? total : `0${total}`;
+				return totalRes;
 			},
 		},
 	});
@@ -57,8 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let countCurrent = document.querySelector(".count__current"),
 		slideNumber = document.querySelector(".slide-number");
+
 	swiperTxt.on("slideChange", function () {
 		let ind = swiperTxt.activeIndex + 1;
+		let indRes = ind >= 10 ? ind : `0${ind}`;
 		gsap.to(countCurrent, 0.2, {
 			force3D: true,
 			y: -10,
@@ -69,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					force3D: true,
 					y: 10,
 				});
-				countCurrent.innerHTML = `0${ind}`;
-				slideNumber.innerHTML = `0${ind}`;
+				countCurrent.innerHTML = indRes;
+				slideNumber.innerHTML = indRes;
 			},
 		});
 		gsap.to(countCurrent, 0.2, {

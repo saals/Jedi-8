@@ -37,7 +37,7 @@ function browsersync() {
 		notify: false,
 		online: true,
 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
-		browser: "firefox",
+		// browser: "firefox",
 	});
 }
 
