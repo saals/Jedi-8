@@ -3,6 +3,10 @@
 	height: 100%;
 	position: relative;
 	background-color: $deep;
+
+	@include media-breakpoint-down(sm) {
+		padding-left: $size-sm;
+	}
 }
 
 .swiper-txt {
@@ -11,6 +15,11 @@
 	overflow: hidden;
 	position: absolute;
 	z-index: 3;
+
+	@include media-breakpoint-down(sm) {
+		height: calc(100% - $size-sm);
+		width: calc(100% - $size-sm);
+	}
 }
 
 .swiper-txt__slide {
@@ -163,8 +172,11 @@
 	width: 71%;
 	position: absolute;
 	z-index: 3;
-	//
 	height: $size;
+
+	@include media-breakpoint-down(sm) {
+		height: $size-sm;
+	}
 }
 
 .hero-content__share {

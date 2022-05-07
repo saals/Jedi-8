@@ -4,11 +4,19 @@
 	align-items: center;
 	min-height: $size;
 	background: $deep;
-	border: 1px solid rgba(255, 255, 255, $opacity);
+	border-bottom: 1px solid rgba(255, 255, 255, $opacity);
+
+	@include media-breakpoint-down(sm) {
+		min-height: $size-sm;
+	}
 }
 
 .header__logo {
 	margin-right: 27px;
+
+	@include media-breakpoint-down(lg) {
+		width: min-content;
+	}
 }
 
 .logo {
@@ -17,11 +25,27 @@
 	&:hover > .logo__name {
 		color: $accent;
 	}
+
+	@include media-breakpoint-down(lg) {
+		& > .logo__name {
+			font-size: 11px;
+			margin-left: 21px;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		& > .logo__name {
+			display: none;
+		}
+	}
 }
 
 .logo__img {
 	width: $size;
 	object-fit: contain;
+
+	@include media-breakpoint-down(sm) {
+		width: $size-sm;
+	}
 }
 
 .logo__name {
@@ -49,6 +73,10 @@
 	text-transform: uppercase;
 	color: $white;
 	opacity: 0.5;
+
+	@include media-breakpoint-down(lg) {
+		justify-content: center;
+	}
 }
 
 .header__contacts {
@@ -61,6 +89,10 @@
 		margin: 0 auto;
 		background-color: $white;
 		opacity: $opacity * 2;
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
 	}
 }
 
@@ -68,12 +100,31 @@
 .contacts__item {
 	padding: 9px 27px;
 
+	span {
+		white-space: nowrap;
+	}
+
 	a {
 		opacity: 1;
 	}
 
 	&:not(:last-child) {
 		border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+		@include media-breakpoint-down(md) {
+			text-align: right;
+		}
+
+		@include media-breakpoint-down(sm) {
+			border-right: none;
+			text-align: center;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		&:last-child {
+			display: none;
+		}
 	}
 }
 
