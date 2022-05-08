@@ -2,7 +2,7 @@
 	position: relative;
 	height: calc(100% - $size);
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		height: calc(100% - $size-sm);
 	}
 }

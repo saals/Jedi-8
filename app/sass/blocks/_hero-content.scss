@@ -4,7 +4,7 @@
 	position: relative;
 	background-color: $deep;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		padding-left: $size-sm;
 	}
 }
@@ -16,7 +16,7 @@
 	position: absolute;
 	z-index: 3;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		height: calc(100% - $size-sm);
 		width: calc(100% - $size-sm);
 	}
@@ -33,6 +33,11 @@
 	align-self: center;
 	margin-left: auto;
 	margin-right: 17%;
+
+	@include media-breakpoint-down(sm) {
+		margin: 0 auto;
+		width: 85%;
+	}
 }
 
 .swiper-txt__title {
@@ -47,6 +52,16 @@
 		color: $accent;
 		white-space: nowrap;
 	}
+
+	@include media-breakpoint-down(lg) {
+		font-size: 50px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: 35px;
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 28px;
+	}
 }
 
 .swiper-txt__desc {
@@ -54,6 +69,10 @@
 	margin-bottom: 18px;
 	font-weight: 600;
 	font-size: 13px;
+
+	@include media-breakpoint-down(md) {
+		font-size: 11px;
+	}
 }
 
 .swiper-txt__button {
@@ -108,6 +127,10 @@
 		position: absolute;
 		z-index: 2;
 	}
+
+	@include media-breakpoint-down(lg) {
+		width: 100%;
+	}
 }
 
 .swiper-img__slide {
@@ -118,7 +141,7 @@
 .slide-img__bg {
 	// width: 100%;
 	height: 100%;
-	// background-position: center;
+	background-position: center;
 	background-size: cover;
 }
 
@@ -128,6 +151,14 @@
 	right: 55px;
 	height: 80px;
 	line-height: 80px;
+	z-index: 2;
+
+	@include media-breakpoint-down(lg) {
+		right: 15px;
+	}
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
 }
 
 .hero-content__slide-number {
@@ -138,6 +169,7 @@
 	font-weight: 500;
 	font-size: 100px;
 	line-height: 148px;
+	z-index: 2;
 
 	.slide-number {
 		color: #222;
@@ -151,6 +183,19 @@
 		margin-left: -25px;
 		-webkit-text-stroke: 0;
 	}
+
+	@include media-breakpoint-down(xl) {
+		right: 35px;
+		transform: scale(0.8);
+	}
+
+	@include media-breakpoint-down(lg) {
+		right: 5px;
+		// transform: scale(0.5);
+	}
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
 }
 
 .hero-content__gear {
@@ -162,6 +207,10 @@
 	height: 470px;
 	background: url(../../images/dist/gear.svg) no-repeat center;
 	background-size: cover;
+
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
 }
 
 .hero-content__controls {
@@ -174,8 +223,12 @@
 	z-index: 3;
 	height: $size;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		height: $size-sm;
+	}
+
+	@include media-breakpoint-down(md) {
+		width: 93%;
 	}
 }
 
@@ -230,6 +283,10 @@
 			background-color: $accent;
 		}
 	}
+
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
 }
 
 .hero-content__scrolbar {
@@ -246,6 +303,10 @@
 		height: 4px;
 		background: $accent;
 		top: -1px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		display: none;
 	}
 }
 

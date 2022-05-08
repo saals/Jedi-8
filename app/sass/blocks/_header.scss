@@ -6,7 +6,7 @@
 	background: $deep;
 	border-bottom: 1px solid rgba(255, 255, 255, $opacity);
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		min-height: $size-sm;
 	}
 }
@@ -29,7 +29,8 @@
 	@include media-breakpoint-down(lg) {
 		& > .logo__name {
 			font-size: 11px;
-			margin-left: 21px;
+			margin-left: 14px;
+			display: block;
 		}
 	}
 	@include media-breakpoint-down(md) {
@@ -43,7 +44,7 @@
 	width: $size;
 	object-fit: contain;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		width: $size-sm;
 	}
 }
@@ -72,7 +73,6 @@
 	letter-spacing: 0.4em;
 	text-transform: uppercase;
 	color: $white;
-	opacity: 0.5;
 
 	@include media-breakpoint-down(lg) {
 		justify-content: center;
@@ -100,12 +100,14 @@
 .contacts__item {
 	padding: 9px 27px;
 
-	span {
-		white-space: nowrap;
+	:first-child {
+		opacity: 0.5;
 	}
 
 	a {
-		opacity: 1;
+		white-space: nowrap;
+		text-decoration: none;
+		color: $accent;
 	}
 
 	&:not(:last-child) {
