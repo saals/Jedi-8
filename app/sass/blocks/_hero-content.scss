@@ -10,15 +10,15 @@
 }
 
 .swiper-txt {
-	height: calc(100% - $size);
-	width: calc(100% - $size);
+	height: calc(100% - #{$size});
+	width: calc(100% - #{$size});
 	overflow: hidden;
 	position: absolute;
 	z-index: 3;
 
 	@include media-breakpoint-down(lg) {
-		height: calc(100% - $size-sm);
-		width: calc(100% - $size-sm);
+		height: calc(100% - #{$size-sm});
+		width: calc(100% - #{$size-sm});
 	}
 }
 
@@ -181,6 +181,7 @@
 	.slide-number-dot {
 		color: $accent;
 		margin-left: -25px;
+		//noinspection CssInvalidPropertyValue
 		-webkit-text-stroke: 0;
 	}
 
@@ -198,6 +199,7 @@
 	}
 }
 
+//noinspection CssUnknownTarget
 .hero-content__gear {
 	position: absolute;
 	top: calc(50% - 270px);
@@ -205,7 +207,7 @@
 	z-index: 2;
 	width: 470px;
 	height: 470px;
-	background: url(../../images/dist/gear.svg) no-repeat center;
+	background: url(../images/dist/gear.svg) no-repeat center;
 	background-size: cover;
 
 	@include media-breakpoint-down(lg) {
