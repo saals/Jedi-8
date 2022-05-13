@@ -38,12 +38,14 @@
 		}
 	}
 
+	//noinspection CssUnknownTarget
 	&::before {
 		display: block;
 		content: url(../images/dist/decoration.svg);
 	}
 }
 
+//noinspection CssUnknownTarget
 .hero-aside__share-icon {
 	background: $accent url(../images/dist/share-solid.svg) no-repeat center;
 	background-size: 12px;
